@@ -1,6 +1,10 @@
-<div class="text-center">
-  <h1>******** Welcome to the longest word-game !********</h1>
-  <h2>Here is your grid :</h2>
-  <p><%= @grid %></p>
-  <p>*****************************************************</p>
-</div>
+<h1>******** Welcome to the longest word-game !********</h1>
+<h2>Here is your grid :</h2>
+<p><%= @grid.join(" ") %></p>
+<p>*****************************************************</p>
+
+<form action="/score">
+  <input type="text" placeholder="Guess the longest word" name="attempt">
+  <input type="hidden" name="grid" value="<%= @grid.join("") %>">
+  <input type="submit" value="Go on">
+</form>

@@ -1,2 +1,8 @@
-<h1>LongestWord#score</h1>
-<p>Find me in app/views/longest_word/score.html.erb</p>
+<h1>Votre essai est <%= @attempt %></h1>
+
+<h2>Détails</h2>
+<ul>
+  <li><%= @result[:time] %></li>
+  <li>Means: <%= @result[:translation] %></li>
+  <li>Score: <%= @result[:score] %> points</li>
+</ul>
